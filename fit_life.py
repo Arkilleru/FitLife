@@ -10,7 +10,7 @@ def hello():
     print(
         "Привет! Я твой персональный фитнес-ассистент",
         "Я помогу тебе рассчитать индекс массы тела и норму воды в день.",
-        sep='\n',
+        sep="\n",
     )
 
     user_name = input("\nКак я могу к тебе обращаться? ")
@@ -38,11 +38,11 @@ def get_calc_info(user_name):
 
     # если человек ввёл через , заменяем на .
     user_weight = float(
-        input("Вес (в кг, например, 52.8): ").replace(',', '.')
+        input("Вес (в кг, например, 52.8): ").replace(",", ".")
     )
 
     user_height = float(
-        input("Рост (в метрах, например, 1.68) ").replace(',', '.')
+        input("Рост (в метрах, например, 1.68) ").replace(",", ".")
     )
 
     return user_weight, user_height
@@ -50,7 +50,7 @@ def get_calc_info(user_name):
 
 def calc(user_weight, user_height):
     """Расчёт имт и нормы воды."""
-    print("\nРасчёт...", "пик пик пик", sep='\n', end='\n\n')
+    print("\nРасчёт...", "пик пик пик", sep="\n", end="\n\n")
 
     bmi = round(user_weight / (user_height ** 2), 1)
 
@@ -70,7 +70,7 @@ def main():
 
 
 # Точка входа
-if __name__ == '__main__':
+if __name__ == "__main__":
     user_name, user_age, user_bmi, water_l = main()
 
     print(
@@ -80,5 +80,5 @@ if __name__ == '__main__':
         f"Индекс массы тела: {user_bmi}",
         f"Норма воды в день: {water_l} л.\n",
         f"Отчёт сформирован. Будьте здоровы {user_name}!",
-        sep='\n',
+        sep="\n",
     )
